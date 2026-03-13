@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-const MONGO_URL = "mongodb://admin:saiteja@localhost:27017";
+const MONGO_URL = "mongodb://root:mini_project@localhost:27017";
 const client = new MongoClient(MONGO_URL);
 
 let db;
