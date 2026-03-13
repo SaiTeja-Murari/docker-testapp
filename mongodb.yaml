@@ -8,6 +8,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: mini_project
+    volumes:
+      - mongo-data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -20,3 +22,7 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: mini_project
     depends_on:
       - mongo
+
+volumes:
+  mongo-data:
+
